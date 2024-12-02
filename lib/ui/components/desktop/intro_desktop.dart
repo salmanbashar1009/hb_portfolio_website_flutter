@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-class IntroductionSection extends StatelessWidget {
-  const IntroductionSection({super.key});
+class IntroDesktop extends StatelessWidget {
+  const IntroDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,29 +12,12 @@ class IntroductionSection extends StatelessWidget {
         image: DecorationImage(image: AssetImage("assets/images/img.png",),fit: BoxFit.cover),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 150,vertical: 50),
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth > 800) {
-            return Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(child: _buildContent()),
-                const SizedBox(width: 50),
-                _buildProfileImage(),
-              ],
-            );
-          } else {
-            return Column(
-
-              children: [
-                _buildProfileImage(),
-                const SizedBox(height: 32),
-                _buildContent(),
-              ],
-            );
-          }
-        },
+      child: Row(
+        children: [
+          _buildContent(),
+          const Spacer(),
+          _buildProfileImage()
+        ],
       ),
     );
   }

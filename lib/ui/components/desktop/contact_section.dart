@@ -96,8 +96,8 @@ class ContactSection extends StatelessWidget {
   }
 
   Future<void> _launchUrl(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+     if (!await launchUrl(Uri.parse(url))) {
+       throw Exception('Could not launch $url');
     }
   }
 }

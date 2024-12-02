@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hb_website/ui/components/contact_section.dart';
-import 'package:hb_website/ui/components/introduction_section.dart';
-import 'package:hb_website/ui/components/nav_bar_button.dart';
-import 'package:hb_website/ui/components/projects_section.dart';
-import 'package:hb_website/ui/components/skills_section.dart';
+import 'package:hb_website/ui/components/desktop/contact_section.dart';
+import 'package:hb_website/ui/components/desktop/nav_bar_button.dart';
+import 'package:hb_website/ui/components/desktop/projects_section.dart';
+import 'package:hb_website/ui/components/desktop/skills_section.dart';
+import 'package:hb_website/ui/screens/introduction_section.dart';
 
 
 
-class PortfolioApp extends StatelessWidget {
-  const PortfolioApp({super.key});
+class PortfolioWebsite extends StatelessWidget {
+  const PortfolioWebsite({super.key});
 
   @override
   Widget build(BuildContext context) {

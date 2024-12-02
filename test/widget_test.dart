@@ -14,7 +14,7 @@ import 'package:hb_website/ui/screens/portfolio-website.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PortfolioApp());
+    await tester.pumpWidget(const PortfolioWebsite());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

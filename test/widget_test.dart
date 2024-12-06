@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:hb_website/main.dart';
-import 'package:hb_website/ui/screens/portfolio-website.dart';
+import 'package:hb_website/ui/screens/home_page.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PortfolioWebsite());
+    await tester.pumpWidget(const HomePage());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

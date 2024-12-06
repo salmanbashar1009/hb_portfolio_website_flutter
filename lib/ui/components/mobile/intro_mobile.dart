@@ -16,7 +16,7 @@ class IntroMobile extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              _buildContent()
+              _buildContentMobile()
             ],
           ),
         ),
@@ -25,50 +25,80 @@ class IntroMobile extends StatelessWidget {
   }
 }
 
-Widget _buildContent() {
+Widget _buildContentMobile() {
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.center,
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       const Text(
         "Hello, I'm",
-        style: TextStyle(fontSize: 24),
+        style: TextStyle(fontSize: 16),
       ),
       const Text(
         'Habibul Bashar',
         style: TextStyle(
-          fontSize: 48,
+          fontSize: 32,
           fontWeight: FontWeight.bold,
         ),
       ),
-      AnimatedTextKit(
-        animatedTexts: [
-          TypewriterAnimatedText(
-            'Flutter Developer',
-            textStyle: const TextStyle(fontSize: 24),
-            speed: const Duration(milliseconds: 100),
-          ),
-        ],
-        repeatForever: true,
+      SizedBox(
+        height: 40,
+        child: AnimatedTextKit(
+          animatedTexts: [
+            TypewriterAnimatedText('Flutter Developer',
+                speed: const Duration(milliseconds: 100),
+                textStyle: const TextStyle(
+                    color: Colors.lightBlue,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600)),
+            TypewriterAnimatedText('Graphic Designer',
+              speed: const Duration(milliseconds: 100),
+              textStyle: const TextStyle(
+                  color: Colors.lightBlue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600),),
+            TypewriterAnimatedText('Social Media Expert',
+                speed: const Duration(milliseconds: 100),
+                textStyle: const TextStyle(
+                    color: Colors.lightBlue,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600)),
+
+            // TypewriterAnimatedText(
+            //   'Flutter Developer',
+            //   textStyle: const TextStyle(fontSize: 24),
+            //   speed: const Duration(milliseconds: 100),
+            // ),
+          ],
+          repeatForever: true,
+        ),
       ),
       const SizedBox(height: 16),
-      const Text(
-        '''Passionate about creating beautiful and functional mobile applications.
-With 5 years of experience in Flutter development, I specialize in building
-cross-platform solutions that delight users.''',
-        style: TextStyle(fontSize: 16),
+      const SizedBox(
+        width: 380,
+        child: Center(
+          child: Text(
+            '''As a skilled Flutter developer, graphic designer, and social media strategist, I bring a unique blend of creativity and technical expertise to every project''',
+            style: TextStyle(fontSize: 16,),textAlign: TextAlign.center,
+          ),
+        ),
       ),
     ],
   );
 }
 
 Widget _buildProfileImage() {
-  return SizedBox(
-    width: 450,
-    height: 450,
-    child: Image.asset(
-      "assets/images/mobile.png",
-      fit: BoxFit.cover,
+  return Padding(
+    padding: const EdgeInsets.all(8),
+    child: SizedBox(
+      width: 450,
+      height: 450,
+      child: Center(
+        child: Image.asset(
+          "assets/images/mobile.png",
+          fit: BoxFit.contain,
+        ),
+      ),
     ),
   );
 }

@@ -18,7 +18,7 @@ class NavBarButton extends StatelessWidget {
         onPressed: onTap,
         child: Text(
           title,
-          style: const TextStyle(color: Colors.black87),
+          style: const TextStyle(color: Colors.black87, fontSize: 18),
         ),
       ),
     );

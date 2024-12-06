@@ -1,15 +1,14 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hb_website/ui/utils/launch_url.dart';
 
-class IntroDesktop extends StatelessWidget {
-  const IntroDesktop({super.key});
+class IntroTablet extends StatelessWidget {
+  const IntroTablet({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 650,
+      height: 850,
+      width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
@@ -17,8 +16,8 @@ class IntroDesktop extends StatelessWidget {
             ),
             fit: BoxFit.cover),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
-      child: Row(
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+      child: Column(
         children: [
           _buildContentDesktop(),
           const Spacer(),
@@ -30,7 +29,7 @@ class IntroDesktop extends StatelessWidget {
 
   Widget _buildContentDesktop() {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
@@ -56,11 +55,11 @@ class IntroDesktop extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.w600)),
               TypewriterAnimatedText('Graphic Designer',
-                  speed: const Duration(milliseconds: 100),
-                  textStyle: const TextStyle(
-                      color: Colors.lightBlue,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w600),),
+                speed: const Duration(milliseconds: 100),
+                textStyle: const TextStyle(
+                    color: Colors.lightBlue,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600),),
               TypewriterAnimatedText('Social Media Expert',
                   speed: const Duration(milliseconds: 100),
                   textStyle: const TextStyle(
@@ -82,61 +81,15 @@ class IntroDesktop extends StatelessWidget {
           width: 500,
           child: Text(
             '''As a skilled Flutter developer, graphic designer, and social media strategist, I bring a unique blend of creativity and technical expertise to every project''',
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 16),textAlign: TextAlign.center,
           ),
         ),
-        const SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right:16),
-              child: IconButton(
-                  onPressed: () {
-                    goToUrl( facebookUrl);
-                  },
-                  icon: const FaIcon(FontAwesomeIcons.squareFacebook, color: Colors.lightBlueAccent,size: 40,)),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right:16),
-              child: IconButton(
-                  onPressed: () {
-    String whatsAppNumber = Uri.encodeComponent('+8801922700031');
-    final whatsApp = "$whatsAppUrl=$whatsAppNumber";
-    goToUrl(whatsApp);
-    },
-                  icon: const FaIcon(FontAwesomeIcons.squareWhatsapp, color: Colors.green,size: 40,)),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right:16),
-              child: IconButton(
-                  onPressed: () {
-                    goToUrl( linkedInUrl);
-                  },
-                  icon: const FaIcon(FontAwesomeIcons.linkedin,size: 40,),
-                    color: Colors.blue,
-                  ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right:16),
-              child: IconButton(
-                  onPressed: () {
-                    goToUrl( githubUrl);
-                  },
-                  icon: const FaIcon(FontAwesomeIcons.github,color: Colors.black,size: 40,),
-                    color: Colors.blue,
-                  ),
-            ),
-
-          ],
-        )
       ],
     );
   }
 
   Widget _buildProfileImage() {
-    return Container(
+    return SizedBox(
       width: 450,
       height: 450,
       child: Image.asset(

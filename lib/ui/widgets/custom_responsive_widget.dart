@@ -16,16 +16,16 @@ class CustomResponsiveWidget extends StatelessWidget {
 
   static bool isTablet(BuildContext context) =>
       MediaQuery.of(context).size.width >= 650 &&
-          MediaQuery.of(context).size.width < 1100;
+          MediaQuery.of(context).size.width < 1250;
 
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1100;
+      MediaQuery.of(context).size.width >= 1250;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 1100) {
+        if (constraints.maxWidth >= 1250) {
           return desktop;
         } else if (constraints.maxWidth >= 650) {
           return tablet;

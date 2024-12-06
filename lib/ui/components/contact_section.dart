@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:hb_website/ui/utils/launch_url.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
@@ -29,19 +30,31 @@ class ContactSection extends StatelessWidget {
                 icon: FontAwesomeIcons.envelope,
                 title: 'Email',
                 value: 'tahmin1507@gmail.com',
-                onTap: () => _launchUrl('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new'),
+                onTap: () {
+                  String compose = Uri.encodeComponent("tahmin1507@gmail.com");
+                  final mailtoUrl = "$mailUrl=$compose";
+                  goToUrl(mailtoUrl);
+                },
               ),
               _buildContactMethod(
-                icon: FontAwesomeIcons.linkedin,
-                title: 'LinkedIn',
-                value: 'LinkedIn.com',
-                onTap: () => _launchUrl('https://www.linkedin.com/in/flutter-developer-habibul-bashar'),
+                icon: FontAwesomeIcons.whatsapp,
+                title: 'WhatsApp',
+                value: '+88 01922700031',
+                onTap: () {
+                  String whatsAppNumber = Uri.encodeComponent('+8801922700031');
+                  final whatsApp = "$whatsAppUrl=$whatsAppNumber";
+                  goToUrl(whatsApp);
+                },
               ),
               _buildContactMethod(
-                icon: FontAwesomeIcons.github,
-                title: 'GitHub',
-                value: '/salmanbashar1009',
-                onTap: () => _launchUrl('https://github.com/salmanbashar1009'),
+                icon: FontAwesomeIcons.telegram,
+                title: 'Telegram',
+                value: '@Shadow_Man1009',
+                onTap: () {
+                  String tgNumber = Uri.encodeComponent('Shadow_Man1009');
+                  final telegram = "$telegramUrl=$tgNumber";
+                  goToUrl(telegram);
+                },
               ),
             ],
           ),
@@ -55,6 +68,7 @@ class ContactSection extends StatelessWidget {
     required String title,
     required String value,
     required VoidCallback onTap,
+
   }) {
     return InkWell(
       onTap: onTap,
@@ -74,7 +88,7 @@ class ContactSection extends StatelessWidget {
         ),
         child: Column(
           children: [
-            FaIcon(icon, size: 32),
+            FaIcon(icon, size: 32,),
             const SizedBox(height: 8),
             Text(
               title,
@@ -93,11 +107,5 @@ class ContactSection extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Future<void> _launchUrl(String url) async {
-     if (!await launchUrl(Uri.parse(url))) {
-       throw Exception('Could not launch $url');
-    }
   }
 }

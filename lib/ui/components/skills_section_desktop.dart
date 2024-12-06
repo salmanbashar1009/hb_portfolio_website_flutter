@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SkillsSection extends StatelessWidget {
-  const SkillsSection({super.key});
+class SkillsSectionDesktop extends StatelessWidget {
+  const SkillsSectionDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,8 @@ class SkillsSection extends StatelessWidget {
           ),
           const SizedBox(height: 32),
           Wrap(
-            spacing: 16,
-            runSpacing: 16,
+            spacing: 24,
+            runSpacing: 24,
             alignment: WrapAlignment.center,
             children: [
               _buildSkillCard('Flutter', FontAwesomeIcons.mobile),

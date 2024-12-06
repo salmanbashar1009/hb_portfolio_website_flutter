@@ -9,7 +9,7 @@ class SkillsSectionDesktop extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(32.0),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(10),
           color: Colors.grey.withOpacity(0.1)
       ),
       child: Column(
@@ -46,7 +46,7 @@ class SkillsSectionDesktop extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(5),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),

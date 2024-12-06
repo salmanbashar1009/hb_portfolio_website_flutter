@@ -1,5 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hb_website/ui/utils/launch_url.dart';
 
 class IntroMobile extends StatelessWidget {
   const IntroMobile({super.key});
@@ -80,6 +83,40 @@ Widget _buildContentMobile() {
           child: Text(
             '''As a skilled Flutter developer, graphic designer, and social media strategist, I bring a unique blend of creativity and technical expertise to every project''',
             style: TextStyle(fontSize: 16,),textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+      const SizedBox(height: 30,),
+      InkWell(
+        borderRadius: BorderRadius.circular(30),
+        onTap: (){
+          goToUrl("https://drive.google.com/file/d/1hr7e5Z_2TA4SVv_Zuz0QGYfGwsA7S60f/view?usp=sharing");
+        },
+        child: Container(
+          width: 120,
+          height: 32,
+          padding: const EdgeInsets.symmetric(horizontal: 10,),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(0.5), blurRadius: 8)
+              ]),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8),
+                child: FaIcon(
+                  FontAwesomeIcons.download,
+                  color: CupertinoColors.activeGreen,
+                  size: 16,
+                ),
+              ),
+              Text("Resume",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.green),)
+            ],
           ),
         ),
       ),

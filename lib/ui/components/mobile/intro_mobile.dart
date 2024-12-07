@@ -115,7 +115,7 @@ Widget _buildContentMobile() {
                   size: 16,
                 ),
               ),
-              Text("Resume",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.green),)
+              Text("RESUME",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.green),)
             ],
           ),
         ),

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,7 +23,14 @@ class IntroDesktop extends StatelessWidget {
         children: [
           _buildContentDesktop(),
           const Spacer(),
-          _buildProfileImage()
+          ShakeY(
+            animate: true,
+              from: 15,
+              duration: const Duration(seconds: 10),
+              infinite: true,
+              curve: Curves.decelerate,
+              child: _buildProfileImage()
+          )
         ],
       ),
     );

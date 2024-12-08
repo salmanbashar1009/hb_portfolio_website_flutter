@@ -21,11 +21,17 @@ class ServicesDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Available Services',
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
+           const Row(
+            children: [
+              Text(
+                'Available Services',
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700,color: Colors.lightBlueAccent),
+              ),
+              SizedBox(width: 20,),
+              FaIcon(FontAwesomeIcons.penFancy,color: Colors.lightBlueAccent,size: 30,)
+            ],
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 15,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

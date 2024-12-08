@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
 
 class IntroMobile extends StatelessWidget {
-  const IntroMobile({super.key});
+  const IntroMobile( {super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,9 @@ Widget _buildContentMobile() {
         "Hello, I'm",
         style: TextStyle(fontSize: 16),
       ),
-      const Text(
+      Text(
         'Habibul Bashar',
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 32,
           fontWeight: FontWeight.bold,
         ),

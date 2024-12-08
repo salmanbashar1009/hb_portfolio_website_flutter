@@ -144,12 +144,12 @@ class IntroDesktop extends StatelessWidget {
   }
 
   Widget _buildProfileImage() {
-    return Container(
+    return SizedBox(
       width: 450,
       height: 450,
       child: Image.asset(
         "assets/images/mobile.png",
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
       ),
     );
   }

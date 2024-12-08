@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hb_website/ui/utils/launch_url.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -32,7 +33,12 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
+                    onTap: (){
+                      const projectUrl = "https://github.com/salmanbashar1009/flutter-projects/tree/main/crafty_bay_ecommerce";
+                      goToUrl(projectUrl);
+                    }
                   ),
+                  const SizedBox(height: 50,),
                   _buildProjectCard(
                     title: 'Weather App',
                     description: 'A weather app with real-time weather update.',
@@ -41,7 +47,12 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
+                    onTap: (){
+                      const projectUrl = "https://github.com/salmanbashar1009/weather-app-flutter";
+                      goToUrl(projectUrl);
+                    }
                   ),
+                  const SizedBox(height: 50,),
                   _buildProjectCard(
                     title: 'Task Manager',
                     description:
@@ -51,6 +62,25 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
+                      onTap: (){
+                        const projectUrl = "https://github.com/salmanbashar1009/flutter-projects/tree/main/flutter_task_manager_app";
+                        goToUrl(projectUrl);
+                      }
+                  ),
+                  const SizedBox(height: 50,),
+                  _buildProjectCard(
+                    title: 'E-commerce Website',
+                    description:
+                    'Penguin Fashion, an online store sells clothes for both men and women',
+                    // imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/010/974/057/small/online-shopping-3d-illustration-shopping-online-store-for-sale-mobile-e-commerce-3d-background-buying-and-selling-concept-png.png',
+                    imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/638/065/non_2x/isometric-illustration-concept-online-shopping-e-commerce-smartphone-app-free-vector.jpg',
+                    width: constraints.maxWidth > 800
+                        ? 300
+                        : constraints.maxWidth - 24,
+                      onTap: (){
+                        const projectUrl = "https://github.com/salmanbashar1009/website-templates";
+                        goToUrl(projectUrl);
+                      }
                   ),
                 ],
               );
@@ -66,6 +96,7 @@ class ProjectsSection extends StatelessWidget {
     required String description,
     required String imageUrl,
     required double width,
+    required VoidCallback onTap,
   }) {
     return Container(
       width: width,
@@ -112,7 +143,7 @@ class ProjectsSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextButton.icon(
-                      onPressed: () {},
+                      onPressed: onTap,
                       icon: const Icon(Icons.code),
                       label: const Text(
                         'view code',
@@ -120,7 +151,7 @@ class ProjectsSection extends StatelessWidget {
                       ),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
+                      onPressed: onTap,
                       icon: const Icon(Icons.launch),
                       label: const Text(
                         'Preview',

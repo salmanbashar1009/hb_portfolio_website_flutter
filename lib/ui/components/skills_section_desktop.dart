@@ -7,7 +7,8 @@ class SkillsSectionDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(32.0),
+      width: 900,
+      padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 100),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.grey.withOpacity(0.1)
@@ -28,11 +29,15 @@ class SkillsSectionDesktop extends StatelessWidget {
             runSpacing: 24,
             alignment: WrapAlignment.center,
             children: [
-              _buildSkillCard('Flutter', FontAwesomeIcons.mobile),
-              _buildSkillCard('Dart', FontAwesomeIcons.code),
+              _buildSkillCard('Flutter', FontAwesomeIcons.flutter),
+              _buildSkillCard('Dart', FontAwesomeIcons.dartLang),
+              _buildSkillCard('React', FontAwesomeIcons.react),
+              _buildSkillCard('JavaScript', FontAwesomeIcons.js),
+              _buildSkillCard('Node.js', FontAwesomeIcons.nodeJs),
               _buildSkillCard('Firebase', FontAwesomeIcons.fire),
-              _buildSkillCard('Git', FontAwesomeIcons.github),
               _buildSkillCard('UI/UX', FontAwesomeIcons.paintbrush),
+              _buildSkillCard('GIT', FontAwesomeIcons.github),
+
             ],
           ),
         ],

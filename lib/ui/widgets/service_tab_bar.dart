@@ -72,7 +72,7 @@ class _ServiceTabBarState extends State<ServiceTabBar> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 35),
+      padding: const EdgeInsets.only(top: 35),
       decoration:  BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10)

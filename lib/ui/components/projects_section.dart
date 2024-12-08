@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
+import 'package:hb_website/ui/widgets/project_preview_sheet.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -33,10 +34,13 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
-                    onTap: (){
+                    viewCode: (){
                       const projectUrl = "https://github.com/salmanbashar1009/flutter-projects/tree/main/crafty_bay_ecommerce";
                       goToUrl(projectUrl);
-                    }
+                    },
+                      preview: (){
+                        showProjectPreview(context, "E-commerce App", "https://raw.githubusercontent.com/salmanbashar1009/flutter-projects/main/crafty_bay_ecommerce/assets/images/crafty-bay.png");
+                      }
                   ),
                   const SizedBox(height: 50,),
                   _buildProjectCard(
@@ -47,10 +51,13 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
-                    onTap: (){
+                    viewCode: (){
                       const projectUrl = "https://github.com/salmanbashar1009/weather-app-flutter";
                       goToUrl(projectUrl);
-                    }
+                    },
+                      preview: (){
+                        showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/img.png");
+                      }
                   ),
                   const SizedBox(height: 50,),
                   _buildProjectCard(
@@ -62,9 +69,12 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
-                      onTap: (){
+                      viewCode: (){
                         const projectUrl = "https://github.com/salmanbashar1009/flutter-projects/tree/main/flutter_task_manager_app";
                         goToUrl(projectUrl);
+                      },
+                      preview: (){
+                        showProjectPreview(context, "Task Manager", "https://raw.githubusercontent.com/salmanbashar1009/flutter-projects/main/flutter_task_manager_app/img_1.png");
                       }
                   ),
                   const SizedBox(height: 50,),
@@ -77,10 +87,13 @@ class ProjectsSection extends StatelessWidget {
                     width: constraints.maxWidth > 800
                         ? 300
                         : constraints.maxWidth - 24,
-                      onTap: (){
+                      viewCode: (){
                         const projectUrl = "https://github.com/salmanbashar1009/website-templates";
                         goToUrl(projectUrl);
-                      }
+                      },
+                    preview: (){
+                      showProjectPreview(context, "E-commerce Website", "https://raw.githubusercontent.com/salmanbashar1009/website-templates/main/website-demo/fashion-website.png");
+                    }
                   ),
                 ],
               );
@@ -96,7 +109,8 @@ class ProjectsSection extends StatelessWidget {
     required String description,
     required String imageUrl,
     required double width,
-    required VoidCallback onTap,
+    required VoidCallback viewCode,
+    required VoidCallback preview,
   }) {
     return Container(
       width: width,
@@ -143,7 +157,7 @@ class ProjectsSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextButton.icon(
-                      onPressed: onTap,
+                      onPressed: viewCode,
                       icon: const Icon(Icons.code),
                       label: const Text(
                         'view code',
@@ -151,7 +165,7 @@ class ProjectsSection extends StatelessWidget {
                       ),
                     ),
                     TextButton.icon(
-                      onPressed: onTap,
+                      onPressed: preview,
                       icon: const Icon(Icons.launch),
                       label: const Text(
                         'Preview',

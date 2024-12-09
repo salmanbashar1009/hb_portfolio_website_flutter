@@ -56,7 +56,7 @@ class ProjectsSection extends StatelessWidget {
                       goToUrl(projectUrl);
                     },
                       preview: (){
-                        showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/home.png");
+                        showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/img.png");
                       }
                   ),
                   const SizedBox(height: 50,),

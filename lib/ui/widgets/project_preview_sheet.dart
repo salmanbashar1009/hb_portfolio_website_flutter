@@ -7,23 +7,35 @@ Future<void> showProjectPreview(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.zero
-        ),
+        elevation:0,
+        shape:  RoundedRectangleBorder(borderRadius: BorderRadius.zero,),
         contentPadding: EdgeInsets.zero,
         backgroundColor: Colors.black,
-        titlePadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+        titlePadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
         title: Row(
           children: [
-            Text(title,style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),),
+            Text(
+              title,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(color: Colors.white),
+            ),
             const Spacer(),
-            IconButton(onPressed: (){Navigator.pop(context);}, icon: const FaIcon(FontAwesomeIcons.remove,size: 20,color: Colors.white,))
+            IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.remove,
+                  size: 20,
+                  color: Colors.white,
+                ))
           ],
         ),
         content: ProjectPreviewSheet(
           imageUrl: imageUrl,
         ),
-
       );
     },
   );
@@ -54,15 +66,9 @@ class _ProjectPreviewSheetState extends State<ProjectPreviewSheet> {
     // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) {
-        Future.delayed(const Duration(milliseconds: 500), () {
-          _scrollPreview();
-        });
-      }else{
-        const Center(
-          child: CircularProgressIndicator()
-        );
-      }
+      Future.delayed(const Duration(milliseconds: 1), () {
+        _scrollPreview();
+      });
     });
   }
 

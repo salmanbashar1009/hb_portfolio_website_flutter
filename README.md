@@ -1,9 +1,9 @@
 # HB portfolio website
-![](assets/preview/home.png)
-![](assets/preview/services.png)
-![](assets/preview/projects.png)
-![](assets/preview/skills.png)
-![](assets/preview/contacet.png)
+![](assets/preview/img.png)
+![](assets/preview/img_1.png)
+![](assets/preview/img_2.png)
+![](assets/preview/img_3.png)
+
 
 A new Flutter project.
 

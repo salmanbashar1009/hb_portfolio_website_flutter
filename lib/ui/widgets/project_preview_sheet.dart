@@ -7,17 +7,23 @@ Future<void> showProjectPreview(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text(title),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero
+        ),
+        contentPadding: EdgeInsets.zero,
+        backgroundColor: Colors.black,
+        titlePadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+        title: Row(
+          children: [
+            Text(title,style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),),
+            const Spacer(),
+            IconButton(onPressed: (){Navigator.pop(context);}, icon: const FaIcon(FontAwesomeIcons.remove,size: 20,color: Colors.white,))
+          ],
+        ),
         content: ProjectPreviewSheet(
           imageUrl: imageUrl,
         ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Text("Back"))
-        ],
+
       );
     },
   );
@@ -63,8 +69,8 @@ class _ProjectPreviewSheetState extends State<ProjectPreviewSheet> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 400,
-      height: 500,
+      width: 325,
+      height: 425,
       child: SingleChildScrollView(
           controller: _scrollController, child: Image.network(widget.imageUrl)),
     );

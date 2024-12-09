@@ -92,11 +92,12 @@ class _AppBarMobileState extends State<AppBarMobile> {
                 const SizedBox(
                   height: 75,
                 ),
-                SkillsSectionDesktop(key: routeLogic.skillKey),
+                ProjectsSection(key: routeLogic.projectKey ,),
+
                 const SizedBox(
                   height: 75,
                 ),
-                ProjectsSection(key: routeLogic.projectKey ,),
+                SkillsSectionDesktop(key: routeLogic.skillKey),
                 const SizedBox(
                   height: 75,
                 ),

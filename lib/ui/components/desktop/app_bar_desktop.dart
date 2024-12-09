@@ -56,8 +56,8 @@ class _AppBarDesktopState extends State<AppBarDesktop> {
             actions: [
               NavBarButton(title: 'Home', onTap: () {routeLogic.scrollToSection(routeLogic.homeKey);}),
               NavBarButton(title: 'Services', onTap: () {routeLogic.scrollToSection(routeLogic.serviceKey);}),
-              NavBarButton(title: 'Skills', onTap: () {routeLogic.scrollToSection(routeLogic.skillKey);}),
               NavBarButton(title: 'Projects', onTap: () {routeLogic.scrollToSection(routeLogic.projectKey);}),
+              NavBarButton(title: 'Skills', onTap: () {routeLogic.scrollToSection(routeLogic.skillKey);}),
               NavBarButton(title: 'Contact', onTap: () {routeLogic.scrollToSection(routeLogic.contactKey);}),
               const SizedBox(
                 width: 35,
@@ -90,11 +90,11 @@ class _AppBarDesktopState extends State<AppBarDesktop> {
                     const SizedBox(
                       height: 75,
                     ),
-                    SkillsSectionDesktop(key: routeLogic.skillKey),
+                    ProjectsSection(key: routeLogic.projectKey),
                     const SizedBox(
                       height: 75,
                     ),
-                    ProjectsSection(key: routeLogic.projectKey),
+                    SkillsSectionDesktop(key: routeLogic.skillKey),
                     const SizedBox(
                       height: 75,
                     ),

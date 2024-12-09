@@ -51,12 +51,12 @@ class DrawerMenu extends StatelessWidget {
           const Divider(),
           ListTile(
             onTap: (){
-              routeLogic.scrollToSection(routeLogic.skillKey);
+              routeLogic.scrollToSection(routeLogic.projectKey);
               Navigator.pop(context);
             },
-            leading: const Icon(Icons.cast_for_education),
+            leading: const Icon(Icons.account_tree_outlined),
             title: Text(
-              'Skills',
+              'Projects',
               style: Theme
                   .of(context)
                   .textTheme
@@ -66,12 +66,12 @@ class DrawerMenu extends StatelessWidget {
           const Divider(),
           ListTile(
             onTap: (){
-              routeLogic.scrollToSection(routeLogic.projectKey);
+              routeLogic.scrollToSection(routeLogic.skillKey);
               Navigator.pop(context);
             },
-            leading: const Icon(Icons.account_tree_outlined),
+            leading: const Icon(Icons.cast_for_education),
             title: Text(
-              'Projects',
+              'Skills',
               style: Theme
                   .of(context)
                   .textTheme

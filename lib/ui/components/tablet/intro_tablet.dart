@@ -12,7 +12,7 @@ class IntroTablet extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/img.png",
+              "assets/images/home.png",
             ),
             fit: BoxFit.cover),
       ),

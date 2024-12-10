@@ -14,7 +14,7 @@ class IntroDesktop extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/home.png",
+              "assets/images/bg.png",
             ),
             fit: BoxFit.cover),
       ),

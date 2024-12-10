@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hb_website/ui/screens/home_page.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
 import 'package:hb_website/ui/widgets/project_preview_sheet.dart';
 
@@ -56,7 +57,7 @@ class ProjectsSection extends StatelessWidget {
                       goToUrl(projectUrl);
                     },
                       preview: (){
-                        showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/img.png");
+                        showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/bg.png");
                       }
                   ),
                   const SizedBox(height: 50,),

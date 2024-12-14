@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hb_website/ui/utils/launch_url.dart';
 import 'package:hb_website/ui/widgets/primary_button.dart';
 import 'package:hb_website/ui/widgets/service_tab_bar.dart';
 
@@ -42,9 +41,9 @@ class ServicesDesktop extends StatelessWidget {
                   softWrap: true,
                   style: Theme.of(context).textTheme.titleMedium)
               ),
-              PrimaryButton(title: "Explore",color: Colors.black,icon: const FaIcon(
+              PrimaryButton(title: "Explore",icon: const FaIcon(
                 FontAwesomeIcons.explosion,
-                color: Colors.orangeAccent,
+                color: Colors.white,
                 size: 16,
               ),onTap:(){
                 // const url = "https://drive.google.com/file/d/1hr7e5Z_2TA4SVv_Zuz0QGYfGwsA7S60f/view?usp=sharing";

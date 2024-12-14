@@ -32,7 +32,7 @@ class TabMenuServices extends StatelessWidget {
               const SizedBox(height: 20,),
               SizedBox(width:390,child: Text(description,style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w500),)),
               const SizedBox(height: 40,),
-              PrimaryButton(title: "Let's Chat", color: Colors.black, icon: const FaIcon(FontAwesomeIcons.arrowRight,size: 14,), onTap: onTop)
+              PrimaryButton(title: "Get Started", icon: const FaIcon(FontAwesomeIcons.arrowRight,size: 14,color: Colors.white,), onTap: onTop)
             ],
 
           ),

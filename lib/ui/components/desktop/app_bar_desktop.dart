@@ -43,7 +43,7 @@ class _AppBarDesktopState extends State<AppBarDesktop> {
             surfaceTintColor: Colors.white,
             elevation: 4,
             title: Padding(
-              padding: const EdgeInsets.only(left: 100),
+              padding: const EdgeInsets.only(left: 100, ),
               child: SizedBox(
                 child: Text(
                   "<HB>",
@@ -62,12 +62,12 @@ class _AppBarDesktopState extends State<AppBarDesktop> {
               const SizedBox(
                 width: 35,
               ),
-               PrimaryButton(title: "RESUME",color: Colors.green,icon: const FaIcon(
+               PrimaryButton(title: "RESUME",icon:  FaIcon(
                 FontAwesomeIcons.download,
-                color: CupertinoColors.activeGreen,
+                color: CupertinoColors.white,
                 size: 16,
               ),onTap:(){
-                 const url = "https://drive.google.com/file/d/1hr7e5Z_2TA4SVv_Zuz0QGYfGwsA7S60f/view?usp=sharing";
+                 const url = "https://drive.google.com/file/d/1sNkiYZp1l4hLq3JTCjzWoULM4LTFUrRU/view?usp=sharing";
                 goToUrl(url);
               } ,),
               const SizedBox(

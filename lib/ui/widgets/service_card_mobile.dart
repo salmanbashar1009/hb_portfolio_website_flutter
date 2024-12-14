@@ -68,19 +68,21 @@ class service_card_mobile extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          PrimaryButton(
-              title: "Contact",
-              color: Colors.green,
-              icon: const FaIcon(
-                FontAwesomeIcons.whatsapp,
-                size: 16,
-                color: Colors.green,
-              ),
-              onTap: () {
-                String whatsAppNumber = Uri.encodeComponent('+8801922700031');
-                final whatsApp = "$whatsAppUrl=$whatsAppNumber";
-                goToUrl(whatsApp);
-              }
+          SizedBox(
+            width: 130,
+            child: PrimaryButton(
+                title: "Contact",
+                icon: const FaIcon(
+                  FontAwesomeIcons.whatsapp,
+                  size: 16,
+                  color: Colors.white,
+                ),
+                onTap: () {
+                  String whatsAppNumber = Uri.encodeComponent('+8801922700031');
+                  final whatsApp = "$whatsAppUrl=$whatsAppNumber";
+                  goToUrl(whatsApp);
+                }
+            ),
           ),
           const SizedBox(
             height: 35,

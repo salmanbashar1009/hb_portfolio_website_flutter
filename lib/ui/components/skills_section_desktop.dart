@@ -29,7 +29,7 @@ class SkillsSectionDesktop extends StatelessWidget {
             runSpacing: 24,
             alignment: WrapAlignment.center,
             children: [
-              _buildSkillCard('Flutter', FontAwesomeIcons.flutter),
+              _buildSkillCard('Flutter', FontAwesomeIcons.flutter,),
               _buildSkillCard('Dart', FontAwesomeIcons.dartLang),
               _buildSkillCard('React', FontAwesomeIcons.react),
               _buildSkillCard('JavaScript', FontAwesomeIcons.js),
@@ -62,7 +62,7 @@ class SkillsSectionDesktop extends StatelessWidget {
       ),
       child: Column(
         children: [
-          FaIcon(icon, size: 32),
+          FaIcon(icon, size: 32,),
           const SizedBox(height: 8),
           Text(
             title,

@@ -120,7 +120,7 @@ class ProjectsSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.shade300,
             spreadRadius: 1,
             blurRadius: 5,
           ),
@@ -154,23 +154,23 @@ class ProjectsSection extends StatelessWidget {
                 Text(description),
                 const SizedBox(height: 12),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextButton.icon(
                       onPressed: viewCode,
-                      icon: const Icon(Icons.code),
+                      icon: const Icon(Icons.code,size: 15,),
                       label: const Text(
-                        'view code',
+                        'View Code',
                         style: TextStyle(fontSize: 12),
                       ),
                     ),
+                    Spacer(),
                     TextButton.icon(
                       onPressed: preview,
-                      icon: const Icon(Icons.launch),
+                      icon: const Icon(Icons.launch,size: 15,),
                       label: const Text(
                         'Preview',
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(fontSize: 12),
                       ),
                     )
                   ],

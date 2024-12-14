@@ -16,6 +16,21 @@ class HomePage extends StatelessWidget {
       title: 'H. Bashar Portfolio Website',
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
+        inputDecorationTheme: InputDecorationTheme(
+            alignLabelWithHint: true,
+            floatingLabelStyle: TextStyle(color: Colors.lightBlueAccent.shade400),
+            fillColor: Colors.white,
+            labelStyle: TextStyle(color:Colors.grey.shade400 ),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.lightBlueAccent.shade400)
+            ),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade500)
+            ),
+            errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.red)
+            )
+        )
       ),
       home: const PortfolioHome(),
     );

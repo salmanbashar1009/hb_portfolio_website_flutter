@@ -13,7 +13,8 @@ class ServicesDesktop extends StatelessWidget {
       width: 900,
       decoration: BoxDecoration(
         color: Colors.grey.shade100,
-        borderRadius: BorderRadius.circular(10)
+        borderRadius: BorderRadius.circular(5),
+
       ),
       padding: const EdgeInsets.all(30),
       child:  Column(

@@ -92,7 +92,12 @@ class _ServiceTabBarState extends State<ServiceTabBar> with SingleTickerProvider
       padding: const EdgeInsets.only(top: 35),
       decoration:  BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(10)
+        borderRadius: BorderRadius.circular(0),
+        boxShadow: [BoxShadow(
+          color: Colors.grey,
+          spreadRadius: 1,
+          blurRadius: 4
+        )]
       ),
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -112,7 +117,6 @@ class _ServiceTabBarState extends State<ServiceTabBar> with SingleTickerProvider
               dividerHeight:0,
               tabs: tabMenu,
             ),
-          const SizedBox(height: 40,),
 
           SizedBox(
             width:750,

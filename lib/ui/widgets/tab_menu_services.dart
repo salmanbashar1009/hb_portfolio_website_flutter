@@ -16,7 +16,7 @@ class TabMenuServices extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration:BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(0),
         color: Colors.grey.shade100,
       ),
       child: Row(

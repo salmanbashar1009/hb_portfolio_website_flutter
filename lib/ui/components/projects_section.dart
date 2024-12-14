@@ -43,7 +43,7 @@ class ProjectsSection extends StatelessWidget {
                         showProjectPreview(context, "E-commerce App", "https://raw.githubusercontent.com/salmanbashar1009/flutter-projects/main/crafty_bay_ecommerce/assets/images/crafty-bay.png");
                       }
                   ),
-                  const SizedBox(height: 50,),
+                  const SizedBox(height: 50,width: 12,),
                   _buildProjectCard(
                     title: 'Weather App',
                     description: 'A weather app with real-time weather update.',
@@ -60,7 +60,7 @@ class ProjectsSection extends StatelessWidget {
                         showProjectPreview(context, "Weather App", "https://raw.githubusercontent.com/salmanbashar1009/weather-app-flutter/main/bg.png");
                       }
                   ),
-                  const SizedBox(height: 50,),
+                  const SizedBox(width:12, height: 50,),
                   _buildProjectCard(
                     title: 'Task Manager',
                     description:
@@ -78,7 +78,7 @@ class ProjectsSection extends StatelessWidget {
                         showProjectPreview(context, "Task Manager", "https://raw.githubusercontent.com/salmanbashar1009/flutter-projects/main/flutter_task_manager_app/img_1.png");
                       }
                   ),
-                  const SizedBox(height: 50,),
+                  const SizedBox(width: 12,height: 50,),
                   _buildProjectCard(
                     title: 'E-commerce Website',
                     description:
@@ -117,12 +117,13 @@ class ProjectsSection extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(0),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade300,
-            spreadRadius: 1,
-            blurRadius: 5,
+              color: Colors.grey.withOpacity(0.7),
+              spreadRadius: 0,
+              blurRadius: 10,
+              blurStyle: BlurStyle.outer
           ),
         ],
       ),

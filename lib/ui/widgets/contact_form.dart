@@ -26,6 +26,10 @@ class _ContactFormState extends State<ContactForm> {
         _subjectTEController.text.trim(),
         _messageTEController.text.trim(),
       );
+      _nameTEController.clear();
+      _emailTEController.clear();
+      _subjectTEController.clear();
+      _messageTEController.clear();
     }
   }
 

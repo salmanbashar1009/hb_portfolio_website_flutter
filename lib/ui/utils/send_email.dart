@@ -2,10 +2,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
-
-
 
 Future<bool> sendEmail(BuildContext context,
     String name, String email, String subject, String message) async {
@@ -32,6 +29,9 @@ Future<bool> sendEmail(BuildContext context,
         );
       }
       );
+      Future.delayed(const Duration(seconds: 2)).then((_){
+        Navigator.pop(context);
+      });
       return true;
   }else{
     showDialog(context: context, builder: (BuildContext context){
@@ -42,6 +42,9 @@ Future<bool> sendEmail(BuildContext context,
           Navigator.pop(context);
         }, child: Text("Back"))],
       );
+    });
+    Future.delayed(const Duration(seconds: 2)).then((_){
+      Navigator.pop(context);
     });
    return false;
   }

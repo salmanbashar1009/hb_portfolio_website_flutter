@@ -25,6 +25,24 @@ class ProjectsSection extends StatelessWidget {
                 spacing: 16,
                 runSpacing: 16,
                 children: [
+                  // _buildProjectCard(
+                  //     title: 'Live Streaming App',
+                  //     description:
+                  //     'Penguin Fashion, an online store sells clothes for both men and women',
+                  //     // imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/010/974/057/small/online-shopping-3d-illustration-shopping-online-store-for-sale-mobile-e-commerce-3d-background-buying-and-selling-concept-png.png',
+                  //     imageUrl: Urls.liveStreamingApp,
+                  //     width: constraints.maxWidth > 800
+                  //         ? 300
+                  //         : constraints.maxWidth - 24,
+                  //     viewCode: (){
+                  //       const projectUrl = "https://github.com/salmanbashar1009/website-templates";
+                  //       goToUrl(projectUrl);
+                  //     },
+                  //     preview: (){
+                  //       showProjectPreview(context, "E-commerce Website", "https://raw.githubusercontent.com/salmanbashar1009/website-templates/main/website-demo/fashion-website.png");
+                  //     }
+                  // ),
+                  const SizedBox(height: 50,width: 12,),
                   _buildProjectCard(
                       title: 'Event Management App',
                       description:
@@ -149,24 +167,7 @@ class ProjectsSection extends StatelessWidget {
                         showProjectPreview(context, "Task Manager", "https://raw.githubusercontent.com/salmanbashar1009/flutter-projects/main/flutter_task_manager_app/img_1.png");
                       }
                   ),
-                  const SizedBox(width: 12,height: 50,),
-                  _buildProjectCard(
-                    title: 'E-commerce Website',
-                    description:
-                    'Penguin Fashion, an online store sells clothes for both men and women',
-                    // imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/010/974/057/small/online-shopping-3d-illustration-shopping-online-store-for-sale-mobile-e-commerce-3d-background-buying-and-selling-concept-png.png',
-                    imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/638/065/non_2x/isometric-illustration-concept-online-shopping-e-commerce-smartphone-app-free-vector.jpg',
-                    width: constraints.maxWidth > 800
-                        ? 300
-                        : constraints.maxWidth - 24,
-                      viewCode: (){
-                        const projectUrl = "https://github.com/salmanbashar1009/website-templates";
-                        goToUrl(projectUrl);
-                      },
-                    preview: (){
-                      showProjectPreview(context, "E-commerce Website", "https://raw.githubusercontent.com/salmanbashar1009/website-templates/main/website-demo/fashion-website.png");
-                    }
-                  ),
+
                 ],
               );
             },

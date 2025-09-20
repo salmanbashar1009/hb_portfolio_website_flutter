@@ -37,7 +37,7 @@ class _AppBarMobileState extends State<AppBarMobile> {
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           elevation: 4,
-          shadowColor: Colors.grey.withOpacity(0.1),
+          shadowColor: Colors.grey.withAlpha(25),
           centerTitle: true,
           actions: [
             Padding(

@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
 import 'package:hb_website/ui/widgets/primary_button.dart';
 
-class service_card_mobile extends StatelessWidget {
-  const service_card_mobile({
+class ServiceCardMobile extends StatelessWidget {
+  const ServiceCardMobile({
     super.key, required this.title, required this.description, required this.imageUrl,
   });
 
@@ -22,7 +22,7 @@ class service_card_mobile extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-                color: Colors.grey.withOpacity(0.7),
+                color: Colors.grey.withAlpha(178),
                 spreadRadius: 0,
                 blurRadius: 10,
                 blurStyle: BlurStyle.outer

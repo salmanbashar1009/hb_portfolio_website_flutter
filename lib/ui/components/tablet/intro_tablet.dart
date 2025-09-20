@@ -40,7 +40,7 @@ class IntroTablet extends StatelessWidget {
           'Habibul Bashar',
           style: TextStyle(
             fontSize: 48,
-            color: Colors.black87.withOpacity(0.7),
+            color: Colors.black87.withAlpha(178),
             fontWeight: FontWeight.bold,
           ),
         ),

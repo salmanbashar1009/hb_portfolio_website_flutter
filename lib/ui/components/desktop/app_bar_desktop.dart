@@ -49,7 +49,7 @@ class _AppBarDesktopState extends State<AppBarDesktop> {
                   "<HB>",
                   style: GoogleFonts.monoton(
                       textStyle:  TextStyle(
-                          fontSize: 40, fontWeight: FontWeight.w700,color: Colors.black.withOpacity(0.6))),
+                          fontSize: 40, fontWeight: FontWeight.w700,color: Colors.black.withAlpha(153))),
                 ),
               ),
             ),

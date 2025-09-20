@@ -35,6 +35,7 @@ class _ContactFormState extends State<ContactForm> {
 
   @override
   void dispose() {
+    super.dispose();
     _nameTEController.dispose();
     _emailTEController.dispose();
     _subjectTEController.dispose();

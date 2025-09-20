@@ -27,7 +27,7 @@ Future<void> showProjectPreview(
                   Navigator.pop(context);
                 },
                 icon: const FaIcon(
-                  FontAwesomeIcons.remove,
+                  FontAwesomeIcons.xmark,
                   size: 20,
                   color: Colors.white,
                 ))

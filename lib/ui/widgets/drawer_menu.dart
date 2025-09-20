@@ -5,7 +5,7 @@ class DrawerMenu extends StatelessWidget {
     super.key,
   });
 
-  RouteLogic routeLogic = RouteLogic();
+  final RouteLogic routeLogic = RouteLogic();
 
   @override
   Widget build(BuildContext context) {

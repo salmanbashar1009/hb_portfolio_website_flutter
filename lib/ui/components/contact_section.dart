@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
 import 'package:hb_website/ui/widgets/contact_form.dart';
-import 'package:hb_website/ui/widgets/primary_button.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
@@ -88,7 +86,7 @@ class ContactSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withAlpha(25),
             spreadRadius: 1,
             blurRadius: 5,
           ),

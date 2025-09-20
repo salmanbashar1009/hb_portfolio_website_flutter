@@ -12,5 +12,5 @@ TextStyle colorizeTextStyle = TextStyle(
   fontSize: 45.0,
   fontWeight: FontWeight.bold,
   fontFamily: 'Horizon',
-  color: Colors.black.withOpacity(0.7)
+  color: Colors.black.withAlpha(178)
 );

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hb_website/ui/utils/launch_url.dart';
 import 'package:hb_website/ui/widgets/project_preview_sheet.dart';
 
+import '../../core/constants/urls.dart';
+import '../widgets/porject_card.dart';
+
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
 
@@ -25,25 +28,24 @@ class ProjectsSection extends StatelessWidget {
                 spacing: 16,
                 runSpacing: 16,
                 children: [
-                  // _buildProjectCard(
-                  //     title: 'Live Streaming App',
-                  //     description:
-                  //     'Penguin Fashion, an online store sells clothes for both men and women',
-                  //     // imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/010/974/057/small/online-shopping-3d-illustration-shopping-online-store-for-sale-mobile-e-commerce-3d-background-buying-and-selling-concept-png.png',
-                  //     imageUrl: Urls.liveStreamingApp,
-                  //     width: constraints.maxWidth > 800
-                  //         ? 300
-                  //         : constraints.maxWidth - 24,
-                  //     viewCode: (){
-                  //       const projectUrl = "https://github.com/salmanbashar1009/website-templates";
-                  //       goToUrl(projectUrl);
-                  //     },
-                  //     preview: (){
-                  //       showProjectPreview(context, "E-commerce Website", "https://raw.githubusercontent.com/salmanbashar1009/website-templates/main/website-demo/fashion-website.png");
-                  //     }
-                  // ),
+                  projectCard(
+                      title: 'Live Streaming App',
+                      description:
+                      'Malooz Television is a live streaming mobile application ',
+                      imageUrl: Urls.liveStreamingApp,
+                      width: constraints.maxWidth > 800
+                          ? 300
+                          : constraints.maxWidth - 24,
+                      viewCode: (){
+                        const projectUrl = "https://github.com/salmanbashar1009/malooz";
+                        goToUrl(projectUrl);
+                      },
+                      preview: (){
+                        showProjectPreview(context, "Live Streaming App", Urls.maloozTv);
+                      }
+                  ),
                   const SizedBox(height: 50,width: 12,),
-                  _buildProjectCard(
+                  projectCard(
                       title: 'Event Management App',
                       description:
                       'A full-featured event management app built with Flutter and Firebase.',
@@ -61,7 +63,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(height: 50,width: 12,),
-                  _buildProjectCard(
+                  projectCard(
                     title: 'E-Commerce App',
                     description:
                         'A full-featured shopping app built with Flutter and Firebase.',
@@ -79,7 +81,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(height: 50,width: 12,),
-                  _buildProjectCard(
+                  projectCard(
                     title: 'Weather App',
                     description: 'A weather app with real-time weather update.',
                     imageUrl:
@@ -96,7 +98,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(width:12, height: 50,),
-                  _buildProjectCard(
+                  projectCard(
                     title: 'Task Manager',
                     description:
                         'A productivity app with cloud synchronization.',
@@ -114,7 +116,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(width: 12,height: 50,),
-                  _buildProjectCard(
+                  projectCard(
                       title: 'Task Manager',
                       description:
                       'A productivity app with cloud synchronization.',
@@ -132,7 +134,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(width: 12,height: 50,),
-                  _buildProjectCard(
+                  projectCard(
                       title: 'Task Manager',
                       description:
                       'A productivity app with cloud synchronization.',
@@ -150,7 +152,7 @@ class ProjectsSection extends StatelessWidget {
                       }
                   ),
                   const SizedBox(width: 12,height: 50,),
-                  _buildProjectCard(
+                  projectCard(
                       title: 'Task Manager',
                       description:
                       'A productivity app with cloud synchronization.',
@@ -177,82 +179,4 @@ class ProjectsSection extends StatelessWidget {
     );
   }
 
-  Widget _buildProjectCard({
-    required String title,
-    required String description,
-    required String imageUrl,
-    required double width,
-    required VoidCallback viewCode,
-    required VoidCallback preview,
-  }) {
-    return Container(
-      width: width,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(0),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.grey.withAlpha(178),
-              spreadRadius: 0,
-              blurRadius: 10,
-              blurStyle: BlurStyle.outer
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
-            child: Image.network(
-              imageUrl,
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.contain,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(description),
-                const SizedBox(height: 12),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    TextButton.icon(
-                      onPressed: viewCode,
-                      icon: const Icon(Icons.code,size: 15,),
-                      label: const Text(
-                        'View Code',
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    ),
-                    Spacer(),
-                    TextButton.icon(
-                      onPressed: preview,
-                      icon: const Icon(Icons.launch,size: 15,),
-                      label: const Text(
-                        'Preview',
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }
